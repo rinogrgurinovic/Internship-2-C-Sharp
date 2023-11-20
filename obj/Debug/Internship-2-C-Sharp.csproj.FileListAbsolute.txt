@@ -1,0 +1,7 @@
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\bin\Debug\Internship-2-C-Sharp.exe.config
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\bin\Debug\Internship-2-C-Sharp.exe
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\bin\Debug\Internship-2-C-Sharp.pdb
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\obj\Debug\Internship-2-C-Sharp.csproj.AssemblyReference.cache
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\obj\Debug\Internship-2-C-Sharp.csproj.CoreCompileInputs.cache
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\obj\Debug\Internship-2-C-Sharp.exe
+C:\Users\xy\Documents\DUMP\domaci2\Internship-2-C-Sharp\obj\Debug\Internship-2-C-Sharp.pdb
