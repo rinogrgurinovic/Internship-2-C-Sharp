@@ -541,9 +541,9 @@ namespace Internship_2_C_Sharp
                                         }
                                         var unos14 = Console.ReadLine();
 
-                                        var list = new List<int>();
-                                        foreach (var item in racuni)
-                                            list.Add(0);
+                                        var prodavnostArtikala = new Dictionary<string, int>();
+                                        foreach (var item in artikli)
+                                            prodavnostArtikala.Add(item.Key, 0);
 
                                         if (unos14 == "0")
                                         {
@@ -617,22 +617,24 @@ namespace Internship_2_C_Sharp
                                             provjeraUnosa = true;
                                             
                                             Console.Clear();
-                                            foreach (var item in artikli)
+
+                                            foreach (var item in racuni)
                                             {
-                                                int pozicija = 1;
-                                                foreach (var item2 in racuni)
+                                                foreach (var item2 in item.Value.Item2)
                                                 {
-                                                    foreach (var item3 in item2.Value.Item2)
-                                                        if (item3.Key == item.Key)
-                                                        {
-                                                            list[pozicija - 1] += item3.Value;
-                                                        }
-                                                    pozicija++;
+                                                    prodavnostArtikala[item2.Key] = prodavnostArtikala[item2.Key] + item2.Value;
                                                 }
                                             }
+
                                             unos1 = 0;
-                                            list.Sort();
-                                            Console.WriteLine(list[0]);
+
+                                            var sortirano = prodavnostArtikala.OrderBy(item => item.Value);
+                                            foreach (var item in sortirano)
+                                            {
+                                                Console.WriteLine($"{item.Key} - {item.Value}");
+                                                break;
+                                            }
+                                            
                                             Console.WriteLine("Pritisnite neku tipku za povratak na pocetni izbornik.");
                                             Console.ReadKey();
                                         }
@@ -642,23 +644,25 @@ namespace Internship_2_C_Sharp
                                             provjeraUnosa = true;
 
                                             Console.Clear();
-                                            foreach (var item in artikli)
+
+                                            foreach (var item in racuni)
                                             {
-                                                int pozicija = 1;
-                                                foreach (var item2 in racuni)
+                                                foreach (var item2 in item.Value.Item2)
                                                 {
-                                                    foreach (var item3 in item2.Value.Item2)
-                                                        if (item3.Key == item.Key)
-                                                        {
-                                                            list[pozicija - 1] += item3.Value;
-                                                        }
-                                                    pozicija++;
+                                                    prodavnostArtikala[item2.Key] = prodavnostArtikala[item2.Key] + item2.Value;
                                                 }
                                             }
+
                                             unos1 = 0;
-                                            list.Sort();
-                                            list.Reverse();
-                                            Console.WriteLine(list[0]);
+
+                                            var sortirano = prodavnostArtikala.OrderBy(item => item.Value);
+                                            sortirano.Reverse();
+                                            foreach (var item in sortirano)
+                                            {
+                                                Console.WriteLine($"{item.Key} - {item.Value}");
+                                                break;
+                                            }
+
                                             Console.WriteLine("Pritisnite neku tipku za povratak na pocetni izbornik.");
                                             Console.ReadKey();
                                         }
